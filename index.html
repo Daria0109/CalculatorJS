@@ -9,36 +9,33 @@
   <body>
     <div class="wrapper">
       <div class="calc">
-        <input
-          class="display"
-          type="text"
-          pattern="[1-9][0-9]*([.][0-9]*?)?"
-          value="0"
-        />
-
-        <div class="calc-buttons">
-          <input class="btn clear" type="button" value="C" />
-          <input class="btn operator" type="button" value="/" />
-
-          <input class="btn numb" type="button" value="7" />
-          <input class="btn numb" type="button" value="8" />
-          <input class="btn numb" type="button" value="9" />
-          <input class="btn operator" type="button" value="x" />
-
-          <input class="btn numb" type="button" value="4" />
-          <input class="btn numb" type="button" value="5" />
-          <input class="btn numb" type="button" value="6" />
-          <input class="btn operator" type="button" value="-" />
-
-          <input class="btn numb" type="button" value="1" />
-          <input class="btn numb" type="button" value="2" />
-          <input class="btn numb" type="button" value="3" />
-          <input class="btn operator" type="button" value="+" />
-
-          <input class="btn numb zero" type="button" value="0" />
-          <input class="btn numb dot" type="button" value="." />
-          <input class="btn result" type="button" value="=" />
+        <div class="calc__display">
+          <div class="calc__display-previous">123</div>
+          <div class="calc__display-current">123</div>
         </div>
+
+        <button class="calc__button clear-all">AC</button>
+        <button class="calc__button delete">Del</button>
+        <button class="calc__button operator">/</button>
+
+        <button class="calc__button numb">7</button>
+        <button class="calc__button numb">8</button>
+        <button class="calc__button numb">9</button>
+        <button class="calc__button operator">x</button>
+
+        <button class="calc__button numb">4</button>
+        <button class="calc__button numb">5</button>
+        <button class="calc__button numb">6</button>
+        <button class="calc__button operator">-</button>
+
+        <button class="calc__button numb">1</button>
+        <button class="calc__button numb">2</button>
+        <button class="calc__button numb">3</button>
+        <button class="calc__button operator">+</button>
+
+        <button class="calc__button numb">0</button>
+        <button class="calc__button numb dot">.</button>
+        <button class="calc__button result">=</button>
       </div>
     </div>
     <script src="./index.js" defer></script>

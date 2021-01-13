@@ -1,1 +1,69 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(./assets/bg1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calc {
+  background-color: rgba(255, 255, 255, 0.87);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  gap: 3px;
+}
+.calc__display {
+  grid-column: 1 / -1;
+  background-color: #4f5d75;
+  color: rgb(250, 250, 250);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.calc__display-previous {
+  padding: 15px 10px 5px;
+  font-size: 16px;
+  color: rgba(250, 250, 250, 0.774);
+}
+.calc__display-current {
+  padding: 15px 10px 10px;
+  font-size: 28px;
+  color: rgb(250, 250, 250);
+}
+.calc__button {
+  background: #bfc0c0;
+  color: #2d3142;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.clear-all,
+.result {
+  grid-column: span 2;
+  background-color: #ef8354;
+}
+.delete {
+  background-color: #ef8354;
+}
