@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="calc">
+        <input
+          class="display"
+          type="text"
+          pattern="[1-9][0-9]*([.][0-9]*?)?"
+          value="0"
+        />
+
+        <div class="calc-buttons">
+          <input class="btn clear" type="button" value="C" />
+          <input class="btn operator" type="button" value="/" />
+
+          <input class="btn numb" type="button" value="7" />
+          <input class="btn numb" type="button" value="8" />
+          <input class="btn numb" type="button" value="9" />
+          <input class="btn operator" type="button" value="x" />
+
+          <input class="btn numb" type="button" value="4" />
+          <input class="btn numb" type="button" value="5" />
+          <input class="btn numb" type="button" value="6" />
+          <input class="btn operator" type="button" value="-" />
+
+          <input class="btn numb" type="button" value="1" />
+          <input class="btn numb" type="button" value="2" />
+          <input class="btn numb" type="button" value="3" />
+          <input class="btn operator" type="button" value="+" />
+
+          <input class="btn numb zero" type="button" value="0" />
+          <input class="btn numb dot" type="button" value="." />
+          <input class="btn result" type="button" value="=" />
+        </div>
+      </div>
+    </div>
+    <script src="./index.js" defer></script>
+  </body>
+</html>
