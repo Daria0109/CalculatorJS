@@ -77,6 +77,9 @@ class Calculator {
     this.currentDisplayElement.innerText = this.getDisplayNumber(
       this.currentNumber
     );
+    if (this.currentNumber === Infinity || this.currentNumber === -Infinity) {
+      this.currentDisplayElement.innerText = "You can't divide by zero!";
+    }
     if (this.operation != null) {
       this.prevDisplayElement.innerText = `${this.getDisplayNumber(
         this.prevNumber
