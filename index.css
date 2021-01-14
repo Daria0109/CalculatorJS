@@ -6,15 +6,12 @@
 body {
   margin: 0;
   padding: 0;
+  width: 100vw;
+  height: 100vh;
   background-image: url(./assets/bg1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-.wrapper {
-  width: 100vw;
-  height: 100vh;
-  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,10 +57,11 @@ body {
   cursor: pointer;
 }
 .clear-all,
-.result {
-  grid-column: span 2;
-  background-color: #ef8354;
-}
+.result,
 .delete {
   background-color: #ef8354;
+}
+.clear-all,
+.result {
+  grid-column: span 2;
 }
