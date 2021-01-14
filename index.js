@@ -31,11 +31,15 @@ class Calculator {
   }
 
   delete() {
+    if (this.currentNumber === Infinity || this.currentNumber === -Infinity)
+      return;
     this.currentNumber = this.currentNumber.toString().slice(0, -1);
   }
 
   getOperation(operation) {
     if (this.currentNumber === "" || this.currentNumber === ".") return;
+    if (this.currentNumber === Infinity || this.currentNumber === -Infinity)
+      return;
     if (this.prevNumber !== "") {
       this.calculate();
     }
@@ -89,6 +93,8 @@ class Calculator {
 
   setNumberToDisplay(number) {
     if (number === "." && this.currentNumber.toString().includes(".")) return;
+    if (this.currentNumber === Infinity || this.currentNumber === -Infinity)
+      return;
     this.currentNumber = this.currentNumber.toString() + number.toString();
   }
 
@@ -97,12 +103,17 @@ class Calculator {
       this.currentNumber
     );
     if (this.currentNumber === Infinity || this.currentNumber === -Infinity) {
-      this.currentDisplayElement.innerText = "You can't divide by zero!";
+      this.currentDisplayElement.innerText = "Press AC, please.";
     }
     if (this.operation != null) {
       this.prevDisplayElement.innerText = `${this.getDisplayNumber(
         this.prevNumber
       )} ${this.operation}`;
+    } else if (
+      this.currentNumber === Infinity ||
+      this.currentNumber === -Infinity
+    ) {
+      this.prevDisplayElement.innerText = "Division by zero is not allowed!";
     } else {
       this.prevDisplayElement.innerText = "";
     }
