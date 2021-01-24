@@ -8,7 +8,7 @@ body {
   padding: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url(./assets/bg1.jpg);
+  background-image: url(../assets/bg-light.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -20,7 +20,7 @@ body {
   transition: all 0.5s;
 }
 body.dark {
-  background-image: url(./assets/bg-black.jpg);
+  background-image: url(../assets/bg-black.jpg);
 }
 
 .mode {
